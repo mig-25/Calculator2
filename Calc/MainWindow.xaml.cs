@@ -32,6 +32,8 @@ namespace Calculator
         bool minusButtonClicked = false;
         bool multiplyButtonClicked = false;
         bool divideButtonClicked = false;
+        bool squareButtonClicked = false;
+
 
         private void btnClearEntry_Click(object sender, RoutedEventArgs e)
         {
@@ -76,7 +78,12 @@ namespace Calculator
                 textBox_Result.Text = total2.ToString();
                 total1 = 0;
             }
-
+            else if (squareButtonClicked == true)
+            {
+                total1 = Math.Round(Math.Sqrt(total1));
+               
+            }
+        
         }
 
         private void btnBackSpace_Click(object sender, RoutedEventArgs e)
@@ -170,6 +177,7 @@ namespace Calculator
             minusButtonClicked = false;
             multiplyButtonClicked = false;
             divideButtonClicked = false;
+            squareButtonClicked = false;
         }
 
         private void btnMinus_Click(object sender, RoutedEventArgs e)
@@ -182,6 +190,7 @@ namespace Calculator
             minusButtonClicked = true;
             multiplyButtonClicked = false;
             divideButtonClicked = false;
+            squareButtonClicked = false;
         }
 
         private void btnTimes_Click(object sender, RoutedEventArgs e)
@@ -194,6 +203,7 @@ namespace Calculator
             minusButtonClicked = false;
             multiplyButtonClicked = true;
             divideButtonClicked = false;
+            squareButtonClicked = false;
         }
 
         private void btnDivide_Click(object sender, RoutedEventArgs e)
@@ -206,6 +216,20 @@ namespace Calculator
             minusButtonClicked = false;
             multiplyButtonClicked = false;
             divideButtonClicked = true;
+            squareButtonClicked = false;
+        }
+
+        private void btnSquare_Click(object sender, RoutedEventArgs e)
+        {
+            total1 += double.Parse(textBox_Result.Text);
+            labelCurrentOperation.Content = textBox_Result.Text + "&#8730;";
+            textBox_Result.Text = "";
+
+            plusButtonClicked = false;
+            minusButtonClicked = false;
+            multiplyButtonClicked = false;
+            divideButtonClicked = false;
+            squareButtonClicked = true;
         }
 
         private void btnDecimal_Click(object sender, RoutedEventArgs e)

@@ -24,6 +24,7 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <!--Number Buttons-->
         <Button x:Name="btn7" Grid.Row="3" Grid.Column="0" Click="btn7_Click">7</Button>
@@ -46,8 +47,8 @@
         <Button x:Name="btnTimes" Grid.Row="4" Grid.Column="3" Click="btnTimes_Click">*</Button>
         <Button x:Name="btnDivide" Grid.Row="5" Grid.Column="3" Click="btnDivide_Click">/</Button>
         <Button x:Name="btnDecimal" Grid.Row="6" Grid.Column="2" Click="btnDecimal_Click">,</Button>
-
-        <Button x:Name="btnEquals" Grid.Row="6" Grid.Column="3" Click="btnEquals_Click">=</Button>
+        <Button x:Name="btnSquare" Grid.Row="6" Grid.Column="4" Click="btnSquare_Click">&#8730;</Button>
+        <Button x:Name="btnEquals" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="4" Click="btnEquals_Click">=</Button>
 
         <!--Clear Buttons-->
         <Button x:Name="btnClearEntry" Grid.Row="2" Grid.Column="0" Click="btnClearEntry_Click">CE</Button>
